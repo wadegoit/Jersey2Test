@@ -16,7 +16,6 @@ public class StuServiceTest
 	
 	@Test
 	 public void testGet(){
-		logger.info("****查询所有getAllStudents****");  
         logger.info("start {}","testGet");
         Client client = ClientBuilder.newClient();
         

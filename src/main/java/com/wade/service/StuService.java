@@ -22,6 +22,11 @@ import org.slf4j.LoggerFactory;
 import com.wade.domain.Student;
 
 
+/**
+ * 基本的增删查改
+ * @author wade
+ *
+ */
 @Path("/students")
 public class StuService
 {
