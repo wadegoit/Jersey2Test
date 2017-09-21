@@ -27,7 +27,7 @@ import com.wade.domain.Student;
  * @author wade
  *
  */
-@Path("/students")
+@Path("students")
 public class StuService
 {
 	private Logger logger = LoggerFactory.getLogger(getClass());
@@ -42,8 +42,8 @@ public class StuService
 		logger.info("init..........StuService.");
 		if (students.size() == 0)
 		{
-			students.put(index, new Student(index++, "stu1", "123456"));
-			students.put(index, new Student(index++, "stu2", "654321"));
+			students.put(index, new Student(index++, "stu0", "123456"));
+			students.put(index, new Student(index++, "stu1", "654321"));
 		}
 	}
 	

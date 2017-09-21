@@ -8,16 +8,16 @@ import javax.ws.rs.client.WebTarget;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
 
-import org.apache.log4j.Logger;
 import org.junit.Test;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import com.wade.domain.User;
-import com.wade.service.RestWS;
 
 
 public class JerseyTest
 {
-	private static Logger logger = Logger.getLogger(RestWS.class);
+	private Logger logger = LoggerFactory.getLogger(getClass());
 	private String url = "http://localhost:8080/jersey2Test/rest/users";
 	
 	@Test
@@ -58,7 +58,7 @@ public class JerseyTest
 		Client client = ClientBuilder.newClient();
 		WebTarget target = client.target(url + "/update3");
 		Response response = target.request().buildPut(Entity.entity(user, MediaType.APPLICATION_XML)).invoke();
-		logger.info(response.getStatus());
+		logger.info("update status :{}",response.getStatus());
 		logger.info("aa ++");
 	}
 }

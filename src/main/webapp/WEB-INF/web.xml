@@ -5,10 +5,16 @@
 	<servlet>
 		<servlet-name>Jersey RESTful Application</servlet-name>
 		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<!-- 默认的扫描包-->
 		<init-param>
 			<param-name>jersey.config.server.provider.packages</param-name>
-			<param-value>com.wade.service</param-value>
-		</init-param>
+			<param-value>com.wade</param-value>
+		</init-param> 
+		<!-- 解决接口无法关联实现类的问题
+	     <init-param>
+            <param-name>javax.ws.rs.Application</param-name>
+            <param-value>com.wade.resource.impl.RestConfig</param-value>
+        </init-param> -->
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>Jersey RESTful Application</servlet-name>
